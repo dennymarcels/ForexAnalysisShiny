@@ -5,7 +5,7 @@ This shiny app is hosted at https://dennymc.shinyapps.io/ForexAnalysis/
 ## Instructions
 
 1. Go to the MyFxBook page you want to analyse, then click on `Export` (top right of the first graph), then `CSV`. Save the file with the `nameOfEA`.
-1. Repeat the process above for as many EAs as you wish to analyse. If you are saving more than one file per EA (for example, same EA but more than one MyFxBook account), the file name should be in the format `nameOfEA_index`, where `index` is any text string. **Do not forget the underscore symbol!**
+1. Repeat the process above for as many EAs as you wish to analyse. If you are saving more than one file per EA (for example, same EA but more than one MyFxBook account), the file name should be in the format `nameOfEA_index`, where `index` is any text string. **Do not forget the underscore symbol!** It is used by the code for correct formatting of the final summary.
 1. At the EA Analysis page (this one you are looking at!), click on `Browse...` on the left panel, choose the CSV files you just downloaded.
 1. After the files are loaded, you will get a short summary with file names and the initial and final trade dates on each file, for your reference.
 1. Below the file/date summary, you can choose the period you wish to analyse. By default, the period is set to the **last 6 months** available in the datasets.
