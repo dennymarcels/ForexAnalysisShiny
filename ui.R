@@ -22,7 +22,8 @@ shinyUI(fluidPage(
                        plotlyOutput("plot") %>% withSpinner,
                        hr(),
                        textOutput("entries"),
-                       DTOutput("finalTable") %>% withSpinner
+                       DTOutput("finalTable") %>% withSpinner,
+                       uiOutput("downloadButton")
               ),
               tabPanel("Instructions",
                        br(),

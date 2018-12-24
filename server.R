@@ -215,6 +215,13 @@ output$minNote <- renderUI({
      )
 })
 
+output$download <- downloadHandler(
+    filename = function(){'report.csv'},
+    content = function(file){
+        write.csv(byPeriod()[, -which(names(byPeriod()) == "EA_MN_S")], file)
+    }
+)
+
 # Render output UIs
 
 output$filesSummary <- renderTable({
@@ -259,6 +266,11 @@ output$finalTable <- renderDT({
      #### options = list(pageLength = 100,
      ####                htmlwidgets.TOJSON_ARGS = list(na = 'string'))
 )
+
+output$downloadButton <- renderUI({
+    req(input$files, input$magicNumberSelection)
+    downloadButton('download', 'Download the report')
+})
 
 output$plot <- renderPlotly({
     req(input$files, input$magicNumberSelection, input$finalTable_rows_selected)
